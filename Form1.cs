@@ -36,10 +36,13 @@ namespace Countries
 
             Invoke(new Action(() => continentCode = Data.ContinentCodeMap[continentComboBox.Text]));
 
-            List<Country> countries = controller.GetRandomCountries(continentCode, int.Parse(nOfCountriesTextBox.Text));
-            countries.Sort((a, b) => a.Name.CompareTo(b.Name));
-
-            if (countries is null)
+            List<Country> countries = null;
+            try
+            {
+                countries = controller.GetRandomCountries(continentCode, int.Parse(nOfCountriesTextBox.Text));
+                countries.Sort((a, b) => a.Name.CompareTo(b.Name));
+            }
+            catch (Exception ex)
             {
                 Invoke(new Action(() =>
                 {

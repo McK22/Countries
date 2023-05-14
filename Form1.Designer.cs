@@ -143,11 +143,11 @@
             noInformationLabel.AutoSize = true;
             noInformationLabel.BackColor = SystemColors.Window;
             noInformationLabel.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            noInformationLabel.Location = new Point(93, 45);
+            noInformationLabel.Location = new Point(28, 45);
             noInformationLabel.Name = "noInformationLabel";
-            noInformationLabel.Size = new Size(340, 45);
+            noInformationLabel.Size = new Size(478, 45);
             noInformationLabel.TabIndex = 2;
-            noInformationLabel.Text = "No information found!";
+            noInformationLabel.Text = "Information corrupted. Try again";
             noInformationLabel.Visible = false;
             // 
             // pendingLabel
